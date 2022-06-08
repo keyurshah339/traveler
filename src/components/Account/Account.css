@@ -1,0 +1,66 @@
+body {
+  --primary-color: #dc2626;
+  --secondary-color: #2563eb;
+}
+.outer-div {
+  max-width: 100vw;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  margin-top: 1rem;
+  border-bottom: 1px solid black;
+}
+
+.logout-button-custom {
+  margin-top: 1.8rem;
+  height: 3rem;
+  width: 5rem;
+  cursor: pointer;
+  height: 2.5rem;
+  width: 10rem;
+  border: 2.5px solid var(--primary-color);
+  border-radius: 0.5rem;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.welcome-text {
+  color: var(--secondary-color);
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+/* *************************** */
+/* for loaders in ProfileDetails AND PasswordReset */
+.account-interaction-loader {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 2rem;
+  align-self: flex-end;
+}
+.top-loading-bar {
+  display: inline-block;
+  width: 100vw;
+  position: fixed;
+  left: -2rem;
+  right: 0;
+}
+/* **************************** */
+
+@media only screen and (max-width: 1024px) {
+  .cards-container {
+    flex-direction: column;
+  }
+}

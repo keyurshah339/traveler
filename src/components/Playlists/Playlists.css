@@ -1,0 +1,39 @@
+body {
+  --trash-bg-color: #e5e7eb;
+}
+.single-playlist-show {
+  border-top: 1px solid black;
+  display: flex;
+  align-items: flex-start;
+}
+
+.trash-button {
+  cursor: pointer;
+  position: relative;
+  top: 2.3rem;
+  left: 0.3rem;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color: var(--primary-color);
+}
+.trash-button ion-icon {
+  font-size: 20px;
+}
+
+.remove-video-button {
+  position: relative;
+  left: 9rem;
+  top: -2.4rem;
+}
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 800px) {
+  .video-container {
+    align-items: center;
+    justify-content: center;
+  }
+}

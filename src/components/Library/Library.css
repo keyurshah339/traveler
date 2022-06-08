@@ -1,0 +1,40 @@
+body {
+  --primary-color: #dc2626;
+}
+.library-outer {
+  min-height: 100vh;
+}
+.library-section {
+  border-top: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  padding-left: 1rem;
+}
+
+.heading-intro {
+  font-weight: lighter;
+  text-align: left;
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+}
+
+.remove-like-loader {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  margin-top: 1rem;
+}
+
+.playlists {
+  border-top: none;
+}
+
+.playlist-loader {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}

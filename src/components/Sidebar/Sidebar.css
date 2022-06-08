@@ -1,0 +1,87 @@
+body {
+  --hover-bg-color: #e5e7eb;
+  margin: 0px;
+  padding: 0px;
+  --primary-color: #dc2626;
+}
+
+.sidebar {
+  border: 3px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+}
+
+.adjustment > ion-icon {
+  font-size: 25px;
+  --ionicon-stroke-width: 25px;
+}
+.adjustment {
+  position: relative;
+  top: 0.7rem;
+  font-size: 25px;
+}
+.side-icon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 4rem;
+
+  width: 4rem;
+}
+
+.icon-text {
+  font-size: small;
+}
+.sidebar-link {
+  text-decoration: none;
+  color: black;
+}
+.sidebar-link:hover {
+  background-color: var(--hover-bg-color);
+}
+
+.sidebar-icon-selected {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+}
+.sidebar-icon-selected:hover {
+  background-color: var(--primary-color);
+}
+
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    flex-direction: row;
+    justify-content: space-around;
+    position: sticky;
+    bottom: 0;
+  }
+  .side-icon {
+    cursor: pointer;
+    flex-direction: column;
+    height: 4rem;
+  }
+  .sidebar-icon-selected {
+    background-color: transparent;
+    color: var(--primary-color);
+    font-weight: bolder;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    font-size: 12px;
+  }
+  .sidebar-icon-selected:hover {
+    background-color: lightgray;
+  }
+  .sidebar-link:hover {
+    background-color: lightgray;
+  }
+  .adjustment {
+    position: relative;
+    top: 0.7rem;
+    font-size: 12px;
+  }
+}

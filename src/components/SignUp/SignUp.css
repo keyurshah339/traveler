@@ -1,0 +1,87 @@
+.body {
+  --main-color: #10b981;
+}
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 0;
+  margin-top: 5rem;
+  min-height: 75vh;
+}
+.login-main {
+  border: none;
+  box-shadow: 0px 0px 10px 0px grey;
+  width: 21rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-field {
+  outline: none;
+  border-radius: 0.2rem;
+  border: 1px solid #d1d5db;
+  height: 1.9rem;
+  width: 14rem;
+  margin-top: 2rem;
+}
+
+.button-div {
+  height: 20rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 5rem;
+}
+
+.button-custom {
+  height: 3rem;
+  width: 8rem;
+}
+
+.welcome-text {
+  display: flex;
+  justify-content: flex-start;
+  font-size: xx-large;
+}
+
+.login-button {
+  background-color: white;
+  height: 3rem;
+  width: 12rem;
+  margin-top: 3rem;
+  border: 2px solid var(--primary-color);
+  font-weight: bold;
+}
+.guest-login {
+  background-color: var(--primary-color);
+  height: 3rem;
+  width: 12rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+.login-heading {
+  color: var(--primary-color);
+}
+
+.labels {
+  position: relative;
+  right: 5rem;
+  margin-bottom: 0.2rem;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+.signup-link {
+  text-decoration: none;
+  color: var(--primary-color);
+}

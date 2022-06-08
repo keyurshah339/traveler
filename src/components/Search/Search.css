@@ -1,0 +1,21 @@
+body {
+  --button-color: #dc2626;
+}
+.none-found {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-back {
+  cursor: pointer;
+  height: 2.5rem;
+  width: 10rem;
+  border-radius: 0.5rem;
+  background-color: var(--button-color);
+  border: hidden;
+  color: white;
+  font-weight: bold;
+}

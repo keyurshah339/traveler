@@ -1,0 +1,76 @@
+body {
+  --primary-color: #dc2626;
+  --success-color: #047857;
+}
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40vw;
+  box-shadow: 0px 0px 10px 0px #6b7280;
+  border-radius: 0.4rem;
+  position: relative;
+}
+
+.profile-details > * {
+  margin: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.holder {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-align: left;
+}
+
+.labels-acc {
+  text-align: left;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+.input-box {
+  height: 2.5rem;
+  border-radius: 0.3rem;
+  border: 1px solid #9ca3af;
+  outline-color: #d1fae5;
+}
+.labels-acc {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+.submit-button {
+  align-self: flex-start;
+  cursor: pointer;
+  height: 2.5rem;
+  width: 10rem;
+  border: 2.5px solid var(--button-color);
+  border-radius: 0.5rem;
+  font-weight: bold;
+  background-color: transparent;
+}
+.update-inital-render-class {
+  display: none;
+}
+.update-status {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+}
+.update-success {
+  color: var(--success-color);
+}
+
+.update-failure {
+  color: var(--primary-color);
+}
+@media only screen and (max-width: 1024px) {
+  .profile-details {
+    width: 80vw;
+  }
+}

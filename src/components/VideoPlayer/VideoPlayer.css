@@ -1,0 +1,114 @@
+body {
+  --main-bg-color: #f9fafb;
+  --button-hover-color: #e5e7eb;
+  --primary-color: #dc2626;
+}
+.outer-main {
+  display: flex;
+  justify-content: center;
+}
+.player-card {
+  background-color: var(--main-bg-color);
+  box-shadow: 0px 0px 8px 1px grey;
+  margin-top: 1rem;
+  width: 55vw;
+}
+
+.liked {
+  color: blue;
+}
+
+.not-liked {
+  color: black;
+}
+
+.video-label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.video-intro {
+  font-size: 20px;
+  margin-left: 1rem;
+}
+
+.interactions {
+  display: flex;
+  width: 10rem;
+  margin-top: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+
+.buttons {
+  cursor: pointer;
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.buttons ion-icon {
+  font-size: 1.5rem;
+}
+
+ion-icon {
+  pointer-events: none;
+}
+
+.creator-details {
+  border-top: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.thumbnail-and-name {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.thumbnail {
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+}
+
+.name {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.video-description {
+  text-align: left;
+}
+
+.like-interaction-loader {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 1.2rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  .outer-main {
+    flex-wrap: wrap;
+  }
+  .player-card {
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .player-card {
+    width: 100vw;
+  }
+}

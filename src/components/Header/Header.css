@@ -1,0 +1,168 @@
+body {
+  --search-box-border-color: #9ca3af;
+  --search-button-background: #e5e7eb;
+  --account-background-color: #047857;
+  --account-text-color: white;
+}
+
+.header-container {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-start {
+  display: flex;
+  align-items: left;
+  margin-left: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+.menu-icon {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: 0.1rem;
+  left: 0.6rem;
+  margin-right: 2rem;
+}
+
+.menu-icon > ion-icon {
+  font-size: 30px;
+  --ionicon-stroke-width: 25px;
+}
+
+.logo-span {
+  cursor: pointer;
+  position: relative;
+  bottom: 0.9rem;
+}
+
+/* center of header */
+
+.header-center {
+  display: flex;
+  height: 3rem;
+  position: relative;
+}
+
+.search-box {
+  outline: none;
+  border: 1px solid var(--search-box-border-color);
+  border-right: none;
+  height: 1.85rem;
+  width: 20rem;
+  position: relative;
+  top: 0.3rem;
+  border-radius: 0.1rem;
+  margin-left: 2rem;
+}
+
+.search-button {
+  cursor: pointer;
+  border: 1px solid var(--search-box-border-color);
+  background-color: var(--search-button-background);
+  height: 2.1rem;
+  width: 4rem;
+  position: relative;
+  top: 0.3rem;
+}
+.search-button > ion-icon {
+  font-size: 19px;
+  --ionicon-stroke-width: 18px;
+}
+.mic-button {
+  cursor: pointer;
+  margin-left: 0.2rem;
+  outline: none;
+  border: none;
+  height: 1.5rem;
+  background-color: transparent;
+  position: relative;
+  top: 0.6rem;
+}
+
+.mic-button > ion-icon {
+  --ionicon-stroke-width: 26px;
+  font-size: 20px;
+}
+
+/* end of header */
+.header-end {
+  display: flex;
+  align-items: right;
+  margin-right: 0.5rem;
+  /* padding-right: 0.5rem; */
+}
+
+.account {
+  text-decoration: none;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background-color: var(--account-background-color);
+  color: var(--account-text-color);
+  font-size: large;
+  position: relative;
+  top: 0.3rem;
+}
+.bell-icon {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+  margin-right: 0.8rem;
+}
+.bell-icon > ion-icon {
+  font-size: 19px;
+  --ionicon-stroke-width: 18px;
+}
+
+@media only screen and (max-width: 800px) {
+  .search-box {
+    width: 15rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .search-box {
+    width: 10rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .search-box {
+    margin-left: 0;
+  }
+  .search-button {
+    width: 2rem;
+  }
+  .mic-button {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .bell-icon {
+    display: none;
+  }
+  .account {
+    /* margin-left: 2rem; */
+  }
+  .search-button {
+    width: 2rem;
+  }
+  .search-box {
+    width: 7rem;
+  }
+  .account {
+    margin: 0;
+  }
+  .menu-icon {
+    margin-right: 1rem;
+  }
+}

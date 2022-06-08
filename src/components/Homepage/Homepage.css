@@ -1,0 +1,39 @@
+body {
+  --button-color: #dc2626;
+  margin: 0;
+  padding: 0;
+}
+.homepage {
+  display: flex;
+  height: calc(100vh - 3.3rem);
+  flex-direction: column;
+  background-image: url("../../images/Homepage.svg");
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+}
+.homepage p {
+  font-size: 1.4rem;
+}
+.homepage-buttons-outer {
+  align-self: center;
+  flex-wrap: wrap;
+}
+
+.homepage-single-button {
+  margin: 1rem;
+  cursor: pointer;
+  height: 2.5rem;
+  width: 10rem;
+  border: 2.5px solid var(--button-color);
+  border-radius: 0.5rem;
+  color: var(--button-color);
+  font-weight: bold;
+  background-color: transparent;
+}
+@media only screen and (max-width: 600px) {
+  .homepage {
+    background-size: 350px;
+    background-position: top right;
+  }
+}
