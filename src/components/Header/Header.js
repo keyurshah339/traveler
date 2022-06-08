@@ -52,7 +52,7 @@ export function Header() {
 
       <div className="header-end">
         <Link to="/account" className="account">
-          A
+          My Account
         </Link>
       </div>
     </header>

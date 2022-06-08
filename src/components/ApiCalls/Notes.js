@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = "https://ancient-dawn-06713.herokuapp.com/";
+const BASE_URL = "https://nirvana-backend.herokuapp.com/";
 export async function AddNote(dataToAPi) {
   try {
     const response = await axios.post(BASE_URL + "notes/add", dataToAPi);

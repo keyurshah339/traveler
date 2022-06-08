@@ -20,19 +20,19 @@ export function Account() {
     <div className="outer-div">
       {!username && <SetLoader />}
 
-      <div className="heading">
-        <h1 className="welcome-text">{username ? username : " ..."}</h1>
-        <button
-          onClick={() => {
-            dispatchAuth({ type: "LOGOUT_USER" });
-            dispatch({ type: "CLEAR_STATE_ON_LOGOUT" });
-            navigate("/");
-          }}
-          className="logout-button-custom"
-        >
-          Logout
-        </button>
-      </div>
+          <div className="heading">
+            <h1 className="welcome-text">{username ? username : " ..."}</h1>
+            <button
+              onClick={() => {
+                dispatchAuth({ type: "LOGOUT_USER" });
+                dispatch({ type: "CLEAR_STATE_ON_LOGOUT" });
+                navigate("/");
+              }}
+              className="logout-button-custom"
+            >
+              Logout
+            </button>
+          </div>
 
       <div className="cards-container">
         <ProfileDetails props={{ getUser }} />
