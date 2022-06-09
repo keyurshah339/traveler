@@ -1,22 +1,22 @@
-import { createContext, useState, useContext } from "react";
+    import { createContext, useState, useContext } from "react";
 
-const ActionManagementContext = createContext();
+    const ActionManagementContext = createContext();
 
-export function ActionManagementProvider({ children }) {
-  const [action, setAction] = useState({
-    isLoading: false,
-    showModal: false,
-    modalText: "",
-    component: "",
-  });
+    export function ActionManagementProvider({ children }) {
+      const [action, setAction] = useState({
+        isLoading: false,
+        showModal: false,
+        modalText: "",
+        component: "",
+      });
 
-  return (
-    <ActionManagementContext.Provider value={{ action, setAction }}>
-      {children}
-    </ActionManagementContext.Provider>
-  );
-}
+      return (
+        <ActionManagementContext.Provider value={{ action, setAction }}>
+          {children}
+        </ActionManagementContext.Provider>
+      );
+    }
 
-export function useActionManager() {
-  return useContext(ActionManagementContext);
-}
+    export function useActionManager() {
+      return useContext(ActionManagementContext);
+    }
