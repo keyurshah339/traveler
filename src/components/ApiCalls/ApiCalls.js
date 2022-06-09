@@ -1,68 +1,68 @@
-import axios from "axios";
-const BASE_URL = "https://ancient-dawn-06713.herokuapp.com/";
-// const BASE_URL = "http://localhost:9000/";
-export async function UserSignIn({ userDetails }) {
-  const dataFromView = { userDetails: userDetails };
-  try {
-    const response = await axios.post(BASE_URL + "users/signin", dataFromView);
-    if (response.status === 200) {
-      const userResponseFromServer = {
-        allowUser: response.data.allowUser,
-        messageToShowOnView: response.data.message,
-        token: response.data.token,
-      };
-      return userResponseFromServer;
-    }
-  } catch (error) {
-    console.log("error ocurred ", error.message);
-  }
-}
-export async function GuestAccess() {
-  try {
-    const response = await axios.post(BASE_URL + "users/guest");
-    if (response.status === 200) {
-      const userResponseFromServer = {
-        allowUser: response.data.allowUser,
-        messageToShowOnView: response.data.message,
-        token: response.data.token,
-      };
-      return userResponseFromServer;
-    }
-  } catch (error) {
-    console.log("error ocurred ", error.message);
-  }
-}
-export async function UserSignUp(userDetails) {
-  const signUpDataFromView = {
-    userDetails: userDetails,
-  };
-  let isSignUpSuccessfull;
-  try {
-    const response = await axios.post(
-      BASE_URL + "users/signup",
-      signUpDataFromView
-    );
-    if (response.status === 200) {
-      if (response.data.status === true) {
-        return (isSignUpSuccessfull = {
-          status: true,
-          token: response.data.token,
-        });
-      } else if (response.data.status === false) {
-        //  11000 is returned when we send data which is already there for common field
-        if (response.data.code === 11000) {
-          isSignUpSuccessfull = {
-            status: false,
-            existingField: response.data.existingField,
-          };
-          return isSignUpSuccessfull;
+      import axios from "axios";
+      const BASE_URL = "https://ancient-dawn-06713.herokuapp.com/";
+      // const BASE_URL = "http://localhost:9000/";
+      export async function UserSignIn({ userDetails }) {
+        const dataFromView = { userDetails: userDetails };
+        try {
+          const response = await axios.post(BASE_URL + "users/signin", dataFromView);
+          if (response.status === 200) {
+            const userResponseFromServer = {
+              allowUser: response.data.allowUser,
+              messageToShowOnView: response.data.message,
+              token: response.data.token,
+            };
+            return userResponseFromServer;
+          }
+        } catch (error) {
+          console.log("error ocurred ", error.message);
         }
       }
-    }
-  } catch (error) {
-    console.log("error occured ", error.message);
-  }
-}
+      export async function GuestAccess() {
+        try {
+          const response = await axios.post(BASE_URL + "users/guest");
+          if (response.status === 200) {
+            const userResponseFromServer = {
+              allowUser: response.data.allowUser,
+              messageToShowOnView: response.data.message,
+              token: response.data.token,
+            };
+            return userResponseFromServer;
+          }
+        } catch (error) {
+          console.log("error ocurred ", error.message);
+        }
+      }
+      export async function UserSignUp(userDetails) {
+        const signUpDataFromView = {
+          userDetails: userDetails,
+        };
+        let isSignUpSuccessfull;
+        try {
+          const response = await axios.post(
+            BASE_URL + "users/signup",
+            signUpDataFromView
+          );
+          if (response.status === 200) {
+            if (response.data.status === true) {
+              return (isSignUpSuccessfull = {
+                status: true,
+                token: response.data.token,
+              });
+            } else if (response.data.status === false) {
+              //  11000 is returned when we send data which is already there for common field
+              if (response.data.code === 11000) {
+                isSignUpSuccessfull = {
+                  status: false,
+                  existingField: response.data.existingField,
+                };
+                return isSignUpSuccessfull;
+              }
+            }
+          }
+        } catch (error) {
+          console.log("error occured ", error.message);
+        }
+      }
 
 export async function GetVideos() {
   try {
