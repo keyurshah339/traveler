@@ -97,18 +97,14 @@ body {
 }
 
 .account {
-  text-decoration: none;
-  cursor: pointer;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 50%;
-  outline: none;
+  background-color: #6C63FF;
   border: none;
-  background-color: var(--account-background-color);
-  color: var(--account-text-color);
-  font-size: large;
-  position: relative;
-  top: 0.3rem;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 .bell-icon {
   cursor: pointer;

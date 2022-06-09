@@ -15,25 +15,25 @@ export function Library() {
     return (
       <div className="library-outer">
         <div className=" library-section">
-          <div className="section-heading">
-            <h1 className="heading-intro">Liked Videos|</h1>
-            {isLoading && component === "videos" && (
-              <div className="remove-like-loader">
-                <SetLoader />
+              <div className="section-heading">
+                <h1 className="heading-intro">Liked Videos|</h1>
+                {isLoading && component === "videos" && (
+                  <div className="remove-like-loader">
+                    <SetLoader />
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-          <Liked />
-        </div>
-        <div className="library-section">
-          <div className="section-heading">
-            <h1 className="heading-intro">Playlists|</h1>
-            {isLoading && component === "playlists" && (
-              <div className="playlist-loader">
-                <SetLoader />
+              <Liked />
+            </div>
+            <div className="library-section">
+              <div className="section-heading">
+                <h1 className="heading-intro">Playlists|</h1>
+                {isLoading && component === "playlists" && (
+                  <div className="playlist-loader">
+                    <SetLoader />
+                  </div>
+                )}
               </div>
-            )}
-          </div>
 
           <Playlists />
         </div>

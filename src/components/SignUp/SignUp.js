@@ -1,20 +1,20 @@
-import "./SignUp.css";
-import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { UserSignUp } from "../ApiCalls/ApiCalls";
-import { useAuth } from "../Reducer/AuthReducer";
-export function SignUp() {
-  const { dispatchAuth } = useAuth();
-  const navigate = useNavigate();
-  const [userDetails, setUserDetails] = useState({
-    username: "",
-    password: "",
-    email: "",
-  });
-  const [exisitingOne, setExistingOne] = useState("");
-  const [displayError, setDisplayError] = useState("none");
-  const [signupButtonText, setSignUpButtonText] = useState("Sign Up");
-  let isSignUpSuccessful;
+  import "./SignUp.css";
+  import { Link, useNavigate } from "react-router-dom";
+  import { useState } from "react";
+  import { UserSignUp } from "../ApiCalls/ApiCalls";
+  import { useAuth } from "../Reducer/AuthReducer";
+  export function SignUp() {
+    const { dispatchAuth } = useAuth();
+    const navigate = useNavigate();
+    const [userDetails, setUserDetails] = useState({
+      username: "",
+      password: "",
+      email: "",
+    });
+    const [exisitingOne, setExistingOne] = useState("");
+    const [displayError, setDisplayError] = useState("none");
+    const [signupButtonText, setSignUpButtonText] = useState("Sign Up");
+    let isSignUpSuccessful;
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -23,21 +23,21 @@ export function SignUp() {
     setSignUpButtonText("Sign Up");
     if (isSignUpSuccessful.status === false) {
       setExistingOne(isSignUpSuccessful.existingField);
-      setDisplayError("block");
-    } else if (isSignUpSuccessful.status === true) {
-      setDisplayError("none");
-      dispatchAuth({
-        type: "CHECK_IF_USER_AUTHENTICATED",
-        payload: {
-          status: true,
-          token: isSignUpSuccessful.token,
-        },
-      });
-      navigate("/explore");
+        setDisplayError("block");
+      } else if (isSignUpSuccessful.status === true) {
+        setDisplayError("none");
+        dispatchAuth({
+          type: "CHECK_IF_USER_AUTHENTICATED",
+          payload: {
+            status: true,
+            token: isSignUpSuccessful.token,
+          },
+        });
+        navigate("/explore");
+      }
     }
-  }
-  return (
-    <form className="form" onSubmit={handleSubmit}>
+    return (
+      <form className="form" onSubmit={handleSubmit}>
       <div className="login-main">
         <h1 className="login-heading">Sign Up</h1>
         <p

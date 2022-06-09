@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = "https://ancient-dawn-06713.herokuapp.com/";
+const BASE_URL = "https://nirvana-backend.herokuapp.com/";
 // const BASE_URL = "http://localhost:9000/";
 export async function UserSignIn({ userDetails }) {
   const dataFromView = { userDetails: userDetails };
