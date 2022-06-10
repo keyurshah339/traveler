@@ -5,14 +5,12 @@
 Traveler is a video library peoject which lets everyone experience how soul filling it is out there, takes us to some amazing places, inspires us to travel and teaches us how important it is for homosapiens to dwel into the lap of mother nature from time to time.
 
 
-- Project created in MERN stack.
-
 ## Features
 
   - Explore section where a user can navigate through different videos and watch whatever she wants.
   - A search component which lets user search for desired videos
   - Categories component which lets user choose between different categories of videos
-  - User signup/signin functionality, fully integrated with backend.(backend hosted on heroku).
+  - User signup/signin functionality.
   - ###### Library component where user can:
     - Create playlists, add a video to it, delete a video from it and can delete the playlist as whole.
     - Add particular video to liked videos or remove from it
