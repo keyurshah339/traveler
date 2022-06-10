@@ -2,6 +2,7 @@ import "./Header.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useVideo } from "../Reducer/Reducer";
+import { FcSearch } from "react-icons/fc";
 export function Header() {
   const { dispatch } = useVideo();
   const [searchKeyword, setSearchKeyword] = useState("");
@@ -45,7 +46,7 @@ export function Header() {
               })
             }
           >
-            <ion-icon className="search-icon" name="search-outline"></ion-icon>
+            <FcSearch />
           </button>
         </Link>
       </div>

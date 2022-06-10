@@ -3,6 +3,14 @@ import { SaveToLiked, RemoveFromLikedVideos } from "../ApiCalls/ApiCalls";
 import { useActionManager } from "../Contexts/ActionManagementContext";
 import { BeforeAsyncOperation, AfterAsyncOperation } from "../../utils/funcs";
 import { SetLoader } from "../Loader/Loader";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
+import { BsHandThumbsUp } from "react-icons/bs";
+import { BsFillHandThumbsUpFill } from "react-icons/bs";
+import { MdAddCircle } from "react-icons/md";
+import { MdOutlineAddCircleOutline } from "react-icons/md";
+
+
 // css from VideoPlayer.css
 
 export function UserLoggedIn({ videoInLiked, video, setShow }) {
@@ -36,7 +44,7 @@ export function UserLoggedIn({ videoInLiked, video, setShow }) {
             }}
             className="not-liked buttons"
           >
-            <ion-icon name="thumbs-up-outline"></ion-icon>
+            <BsHandThumbsUp />
           </button>
         ) : (
           <button
@@ -55,7 +63,7 @@ export function UserLoggedIn({ videoInLiked, video, setShow }) {
             }}
             className="liked buttons"
           >
-            <ion-icon name="thumbs-up-sharp"></ion-icon>
+            <BsFillHandThumbsUpFill />
           </button>
         )}
         <button
@@ -63,7 +71,7 @@ export function UserLoggedIn({ videoInLiked, video, setShow }) {
           className="buttons tooltip"
           onClick={() => setShow(true)}
         >
-          <ion-icon name="create-outline"></ion-icon>
+          <MdAddCircle />
         </button>
       </div>
     </>
