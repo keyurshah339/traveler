@@ -3,11 +3,15 @@ body {
 }
 .library-outer {
   min-height: 100vh;
+  width: 90%;
+  background-color: #f9f9f9;
+
+  
 }
 .library-section {
-  border-top: 1px solid var(--primary-color);
-  border-bottom: 1px solid var(--primary-color);
-  padding-left: 1rem;
+  width: 95%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-left: 1rem;
 }
 
 .heading-intro {
@@ -18,6 +22,7 @@ body {
 .section-heading {
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
 }
 
 .remove-like-loader {
@@ -37,4 +42,84 @@ body {
   display: flex;
   align-items: center;
   margin-top: 1.5rem;
+}
+
+.rightsidebar{
+  width: 20%;
+  background-color: #f9f9f9;
+
+}
+
+.sidebarContainer{
+  height: 40%;
+  width: 85%;
+  margin: 1rem;
+}
+
+.text {
+  width: 80px;
+  height: 80px;
+  /*BLUE BG*/
+  background: radial-gradient(
+    ellipse at center,
+    #6996A6 0%,
+    #6996A6 70%,
+    rgba(0, 128, 172, 0) 70.3%
+  );
+  /*RED BG
+  background: radial-gradient(
+    ellipse at center,
+    rgba(210, 20, 20, 1) 0%,
+    rgba(210, 20, 20, 1) 70%,
+    rgba(210, 20, 20, 0) 70.3%
+  );*/
+  position: relative;
+  margin: auto;
+  color: white;
+}
+
+.textstyle {
+  height: 100%;
+  font-size: 40px;
+  line-height: 1.25;
+  /* padding: 32%; */
+  padding-top: 19%;
+  text-align: center;
+  font-style: bold;
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.lowerContainer{
+  margin-top: 1rem;
+  width: 80%;
+  height: 40%;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.insidelowerContainer{
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: "Roboto","Arial",sans-serif;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    font-weight: 100;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headings{
+  margin-left: 1rem;
+  color: black;
+  font-family: "Roboto","Arial",sans-serif;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  font-weight: 400;
+  max-height: 2.2rem;
+  overflow: hidden;
+  display: block;
+  -webkit-line-clamp: 1;
 }

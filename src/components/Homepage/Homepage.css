@@ -1,5 +1,5 @@
 body {
-  --button-color: #6C63FF;
+  --button-color: #322bff;
   margin: 0;
   padding: 0;
 }
@@ -7,10 +7,11 @@ body {
   display: flex;
   height: calc(100vh - 3.3rem);
   flex-direction: column;
-  background-image: url("../../images/Homepage.svg");
+  background-image: url("https://img.freepik.com/free-vector/abstract-blue-white-wave-background_41084-451.jpg?w=2000");
   background-repeat: no-repeat;
   align-items: center;
   justify-content: center;
+  background-size: 100% 100%;
 }
 .homepage p {
   font-size: 1.4rem;
@@ -25,9 +26,9 @@ body {
   cursor: pointer;
   height: 2.5rem;
   width: 10rem;
-  border: 2.5px solid var(--button-color);
+  border: 2.5px solid #322bff;
   border-radius: 0.5rem;
-  color: var(--button-color);
+  color: #322bff;
   font-weight: bold;
   background-color: transparent;
 }

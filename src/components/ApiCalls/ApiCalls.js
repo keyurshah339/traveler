@@ -4,6 +4,7 @@ const BASE_URL = "https://nirvana-backend.herokuapp.com/";
 export async function UserSignIn({ userDetails }) {
   const dataFromView = { userDetails: userDetails };
   try {
+    localStorage.setItem('username', userDetails.username);
     const response = await axios.post(BASE_URL + "users/signin", dataFromView);
     if (response.status === 200) {
       const userResponseFromServer = {
@@ -21,6 +22,7 @@ export async function GuestAccess() {
   try {
     const response = await axios.post(BASE_URL + "users/guest");
     if (response.status === 200) {
+      localStorage.setItem('username', 'Guest');
       const userResponseFromServer = {
         allowUser: response.data.allowUser,
         messageToShowOnView: response.data.message,

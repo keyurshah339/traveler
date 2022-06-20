@@ -16,6 +16,12 @@ const VideoHandleContext = createContext();
 function videosHandler(state, { type, payload }) {
   const { likedVideos, playlists, originalVideos } = state;
   switch (type) {
+    case "WATCH_LATER":
+      
+      return {...state,watchLaterVideos:[...state.watchLaterVideos,payload]}
+
+      case "DELETE_WATCHLATER":
+      return {...state,watchLaterVideos:[...state.watchLaterVideos.filter(item => item._id !== payload )]}
     case "INITIAL_VIDEOS_RENDER":
       return {
         ...state,
@@ -111,6 +117,7 @@ function videosHandler(state, { type, payload }) {
   }
 }
 
+
 export function DataProvider({ children }) {
   const token = localStorage.getItem("token");
   setupAuthHeaderForServiceCalls(token);
@@ -172,6 +179,8 @@ export function DataProvider({ children }) {
     videos,
     originalVideos,
   });
+console.log('state',state)
+
   return (
     <VideoHandleContext.Provider value={{ state, dispatch }}>
       {children}

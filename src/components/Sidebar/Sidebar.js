@@ -1,5 +1,8 @@
 import "./Sidebar.css";
 import { NavLink } from "react-router-dom";
+import { AiFillHome } from "react-icons/ai";
+import { MdOutlineExplore } from "react-icons/md";
+import { ImLibrary } from "react-icons/im";
 export function Sidebar() {
   return (
     <div className="sidebar">
@@ -11,7 +14,7 @@ export function Sidebar() {
       >
         <div className="side-icon">
           <span className="adjustment">
-            <ion-icon name="home-outline"></ion-icon>
+            <AiFillHome />
           </span>
           <span className="adjustment icon-text">Home</span>
         </div>
@@ -23,7 +26,7 @@ export function Sidebar() {
       >
         <div className="side-icon">
           <span className="adjustment">
-            <ion-icon name="compass-outline"></ion-icon>
+            <MdOutlineExplore />
           </span>
           <span className="adjustment icon-text">Explore</span>
         </div>
@@ -35,7 +38,7 @@ export function Sidebar() {
       >
         <div className="side-icon">
           <span className="adjustment">
-            <ion-icon name="library-outline"></ion-icon>
+            <ImLibrary />
           </span>
           <span className="adjustment icon-text">Library</span>
         </div>

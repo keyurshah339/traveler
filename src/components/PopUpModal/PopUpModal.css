@@ -1,13 +1,14 @@
 .modale {
   border: 2.5px solid var(--primary-color);
-  padding: 0.5rem;
+  padding: 1.5rem;
   position: fixed;
   bottom: 1rem;
   right: 0;
   margin-right: 1rem;
   transform: translate(50rem);
-  background-color: white;
+  background-color: #5069C3;
   transition: all 0.4s ease-in-out;
+  color: white;
 }
 
 .active {

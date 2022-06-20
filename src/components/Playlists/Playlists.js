@@ -5,6 +5,11 @@ import { DeleteFromPlaylist, RemovePlaylist } from "../ApiCalls/ApiCalls";
 import { useActionManager } from "../Contexts/ActionManagementContext";
 import { BeforeAsyncOperation, AfterAsyncOperation } from "../../utils/funcs";
 import { useState } from "react";
+import { AiFillDelete } from "react-icons/ai";
+import { RiDeleteBin5Line } from "react-icons/ri";
+import { Tooltip } from 'primereact/tooltip';
+
+
 export function Playlists({ playlist }) {
   const { dispatch, state } = useVideo();
   const { playlists } = state;
@@ -17,10 +22,11 @@ export function Playlists({ playlist }) {
         {playlists.map((playlist) => (
           <div key={playlist._id}>
             <div className="single-playlist-show">
-              <h1 style={{ fontWeight: "lighter", textAlign: "left" }}>
+              <h1 style={{ fontWeight: "200", textAlign: "left",fontSize:'30px',marginLeft:'1rem' }}>
                 {playlist.playlistName}
               </h1>
               <button
+              tooltip="Enter your username"
                 onClick={async () => {
                   BeforeAsyncOperation({
                     action,
@@ -38,7 +44,7 @@ export function Playlists({ playlist }) {
                 }}
                 className="trash-button"
               >
-                <ion-icon name="trash"></ion-icon>
+                <AiFillDelete  size="1.3em" color="red" />
               </button>
             </div>
             {playlist.videos.length > 0 ? (
@@ -68,14 +74,15 @@ export function Playlists({ playlist }) {
                         });
                       }}
                     >
-                      <ion-icon name="trash"></ion-icon>
+                    <AiFillDelete color="red" />
+
                     </button>
                   </div>
                 ))}
               </div>
             ) : (
               <div>
-                <h1 className="none-selected">
+                <h1 className="none-selected" style={{marginLeft:'1rem'}}>
                   No videos in here currently...
                 </h1>
               </div>

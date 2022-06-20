@@ -2,7 +2,7 @@ body {
   --trash-bg-color: #e5e7eb;
 }
 .single-playlist-show {
-  border-top: 1px solid black;
+  border-top:  1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: flex-start;
 }

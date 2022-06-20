@@ -48,5 +48,5 @@ export function AfterAsyncOperation({ action, setAction, textPassedToModal }) {
       showModal: false,
       modalText: "",
     });
-  }, 1300);
+  }, 4000);
 }
