@@ -8,9 +8,10 @@ import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import { BsHandThumbsUp } from "react-icons/bs";
 import { BsFillHandThumbsUpFill } from "react-icons/bs";
 import { MdAddCircle } from "react-icons/md";
-import { MdOutlineAddCircleOutline } from "react-icons/md";
 import { MdOutlineWatchLater } from "react-icons/md";
 import { MdWatchLater } from "react-icons/md";
+import { MdOutlineAddCircleOutline } from "react-icons/md";
+
 
 import { useState } from "react";
 
@@ -51,7 +52,7 @@ export function UserLoggedIn({ videoInLiked, video, setShow }) {
             }}
             className="not-liked buttons"
           >
-            <BsHandThumbsUp />
+            <BsHandThumbsUp size="1.5em"/>
           </button>
         ) : (
           <button
@@ -70,7 +71,7 @@ export function UserLoggedIn({ videoInLiked, video, setShow }) {
             }}
             className="liked buttons"
           >
-            <BsFillHandThumbsUpFill />
+            <BsFillHandThumbsUpFill size="1.5em" />
           </button>
         )}
         
@@ -91,7 +92,7 @@ export function UserLoggedIn({ videoInLiked, video, setShow }) {
               className="not-liked buttons"
           >
             
-            <MdOutlineWatchLater />
+            <MdOutlineWatchLater  size="1.5em"/>
           </button>
           :
           <button
@@ -109,7 +110,7 @@ export function UserLoggedIn({ videoInLiked, video, setShow }) {
               className="liked buttons"
           >
             
-            <MdWatchLater />
+            <MdWatchLater  size="1.5em"/>
           </button>
         
           }
@@ -121,7 +122,7 @@ export function UserLoggedIn({ videoInLiked, video, setShow }) {
           className="buttons tooltip"
           onClick={() => setShow(true)}
         >
-          <MdAddCircle />
+          <MdOutlineAddCircleOutline size="1.5em" />
         </button>
       </div>
     </>

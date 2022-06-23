@@ -4,7 +4,17 @@ import { useState } from "react";
 import { useVideo } from "../Reducer/Reducer";
 import { FcSearch } from "react-icons/fc";
 import { BsSearch } from "react-icons/bs";
+import { useLocation } from 'react-router-dom'
+import { useAuth } from "../../components/Reducer/AuthReducer";
+
+
+
 export function Header() {
+  const { stateAuth } = useAuth();
+  const { isUserAuthenticated } = stateAuth;
+  console.log('auth',isUserAuthenticated)
+  const location = useLocation();
+  console.log('path',location.pathname)
   const username = localStorage.getItem('username');
   const { dispatch } = useVideo();
   const [searchKeyword, setSearchKeyword] = useState("");
@@ -35,7 +45,7 @@ export function Header() {
           </span>
         </Link>
       </div>
-      <div className="header-center">
+      {location.pathname !== '/'  && <div className="header-center">
         <input
           type="text"
           className="search-box"
@@ -57,7 +67,7 @@ export function Header() {
             <BsSearch />
           </button>
         </Link>
-      </div>
+      </div>}
 
       <div className="header-end">
         <Link style={{textDecoration:'none'}} to="/account" >

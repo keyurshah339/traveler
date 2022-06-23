@@ -33,9 +33,9 @@ export function Library() {
   <div className="library-outer">
         <div className=" library-section">
               <div className="section-heading">
-                <h1 className="headings">
-                  <AiOutlineLike/>
-                  Liked Videos</h1>
+                <div style={{display:'flex'}} className="headings">
+                 <div style={{marginTop:'2%'}}><AiOutlineLike/></div> 
+                  <div>Liked Videos</div></div>
                 {isLoading && component === "videos" && (
                   <div className="remove-like-loader">
                     <SetLoader />
@@ -48,9 +48,14 @@ export function Library() {
             {/* watchlater */}
             <div className=" library-section">
               <div className="section-heading">
-                <h1 className="headings">
+                {/* <h1 className="headings">
                   <MdOutlineWatchLater/>
-                  Watch Later</h1>
+                  Watch Later</h1> */}
+
+                  <div style={{display:'flex'}} className="headings">
+                 <div style={{marginTop:'2%'}}><MdOutlineWatchLater/></div> 
+                  <div>Watch Later</div></div>
+
                 {isLoading && component === "videos" && (
                   <div className="remove-like-loader">
                     <SetLoader />
@@ -63,10 +68,15 @@ export function Library() {
 
             <div className="library-section">
               <div className="section-heading">
-                <h1 className="headings">
+                {/* <h1 className="headings">
                   <MdPlaylistPlay />
-                  Playlists</h1>
-                  <p className="headings" style={{fontWeight:'100',fontSize:'1rem'}}>Playlists you create or save will show up here.</p>
+                  Playlists</h1> */}
+
+                  <div style={{display:'flex'}} className="headings">
+                 <div style={{marginTop:'2%'}}><MdPlaylistPlay/></div> 
+                  <div>Playlists</div></div>
+
+                  <div className="headings" style={{fontWeight:'100',fontSize:'1rem'}}>Playlists you create or save will show up here.</div>
                 {isLoading && component === "playlists" && (
                   <div className="playlist-loader">
                     <SetLoader />

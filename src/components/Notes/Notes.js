@@ -53,7 +53,9 @@ export function Notes({ video }) {
   }
   return (
     <div className="notes-outer">
-      <p className="notes-heading">Fill Your Bucket List...</p>
+      <p className="notes-heading">Notepad</p>
+      <div className="notes-subheading">Find something Interesting? Take Notes!</div>
+
       {isLoading && component === "notes" && (
         <div className="notes-interaction-loader">
           <SetLoader />
@@ -72,7 +74,7 @@ export function Notes({ video }) {
       <input
         className="notes-input-box"
         type="text"
-        placeholder="Type here..."
+        placeholder="Add Notes"
         onKeyPress={(e) => (e.key === "Enter" ? notesHandler(e) : "do nothing")}
       />
     </div>

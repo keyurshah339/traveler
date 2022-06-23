@@ -22,7 +22,7 @@ body {
 }
 
 .homepage-single-button {
-  margin: 1rem;
+  margin: 1rem !important;
   cursor: pointer;
   height: 2.5rem;
   width: 10rem;
@@ -31,10 +31,15 @@ body {
   color: #322bff;
   font-weight: bold;
   background-color: transparent;
+  text-decoration: none !important;
 }
 @media only screen and (max-width: 600px) {
   .homepage {
     background-size: 350px;
     background-position: top right;
   }
+}
+
+.videoLibrary{
+  color: #6C63FF !important;
 }

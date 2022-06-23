@@ -42,6 +42,7 @@ export function SignIn() {
       }
     }
     async function guestLoginHandler(e) {
+      
       e.preventDefault();
       e.stopPropagation();
       await handleSubmit({ e, guest: true });
@@ -73,12 +74,7 @@ export function SignIn() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <input type="submit" className="login-button" value={loginButtonText} />
-          <p>
-            Don't have an account?{" "}
-            <Link className="signup-link" to="/signup">
-              Sign up
-            </Link>
-          </p>
+          
           <button
             type="submit"
             className="guest-login"
@@ -86,6 +82,14 @@ export function SignIn() {
           >
           Sign In as Guest
         </button>
+
+        <p>
+            Don't have an account?{" "}
+            <Link className="signup-link" to="/signup">
+              Sign up
+            </Link>
+        </p>
+
       </div>
     </form>
   );

@@ -10,22 +10,27 @@ export function Homepage() {
   const { isUserAuthenticated } = stateAuth;
   return isUserAuthenticated ? (
     <div className="homepage">
-      <p style={{fontFamily: 'cursive',width:'60%'}}>Traveler is a video library which lets everyone experience how soul filling it is out there, takes us to some amazing places, inspires us to travel and teaches us how important it is for homosapiens to dwel into the lap of mother nature from time to time.</p>
+      <p style={{fontFamily: 'cursive',width:'60%'}}>Traveler is a <span className="videoLibrary">video library</span> which lets everyone experience how soul filling it is out there, takes us to some amazing places, inspires us to travel and teaches us how important it is for homosapiens to dwel into the lap of mother nature from time to time.</p>
       <div className="homepage-buttons-outer">
-        <Link to="/explore">
-          <button className="homepage-single-button">Explore</button>
+        <Link style={{textDecoration:'none'}} to="/explore">
+          {/* <button className="homepage-single-button">Explore</button>
+           */}
+        <Button className="homepage-single-button"   label="Explore" aria-label="Explore"  />
+
         </Link>
       </div>
     </div>
   ) : (
     <div className="homepage">
-      <p style={{fontFamily: 'cursive',width:'60%'}}>Traveler is a video library which lets everyone experience how soul filling it is out there, takes us to some amazing places, inspires us to travel and teaches us how important it is for homosapiens to dwel into the lap of mother nature from time to time.</p>
+      <p style={{fontFamily: 'cursive',width:'60%'}}>Traveler is a <span className="videoLibrary">video library</span> which lets everyone experience how soul filling it is out there, takes us to some amazing places, inspires us to travel and teaches us how important it is for homosapiens to dwel into the lap of mother nature from time to time.</p>
       <div className="homepage-buttons-outer">
-        <Link to="/explore">
-          <button className="homepage-single-button">Explore</button>
+        <Link style={{textDecoration:'none'}} to="/explore">
+        <Button className="homepage-single-button"   label="Explore" aria-label="Explore"  />
+          {/* <button className="homepage-single-button">Explore</button> */}
         </Link>
-        <Link to="/login">
-          <button className="homepage-single-button">Sign In</button>
+        <Link style={{textDecoration:'none'}} to="/login">
+        <Button  className="homepage-single-button" label="Sign In" aria-label="Sign In"  />
+          {/* <button className="homepage-single-button">Sign In</button> */}
         </Link>
       </div>
     </div>
