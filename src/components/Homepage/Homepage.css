@@ -26,9 +26,7 @@ body {
   cursor: pointer;
   height: 2.5rem;
   width: 10rem;
-  border: 2.5px solid #322bff;
   border-radius: 0.5rem;
-  color: #322bff;
   font-weight: bold;
   text-decoration: none !important;
 }
